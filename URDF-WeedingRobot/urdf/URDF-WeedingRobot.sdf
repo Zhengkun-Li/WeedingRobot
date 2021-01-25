@@ -1,0 +1,810 @@
+<sdf version='1.6'>
+  <model name='URDF-WeedingRobot'>
+    <link name='base_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.015484 -0.007701 0.067479 0 -0 0</pose>
+        <mass>5.89736</mass>
+        <inertia>
+          <ixx>0.143052</ixx>
+          <ixy>-0.0246202</ixy>
+          <ixz>0.0323112</ixz>
+          <iyy>0.138307</iyy>
+          <iyz>0.0290889</iyz>
+          <izz>0.134723</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <collision name='base_link_fixed_joint_lump__Link_LIW2_collision_1'>
+        <pose frame=''>-0.49744 -0.4951 0.643 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_LIW2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/base_link.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <visual name='base_link_fixed_joint_lump__Link_LIW2_visual_1'>
+        <pose frame=''>-0.49744 -0.4951 0.643 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_LIW2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <link name='Link_IW2'>
+      <pose frame=''>-0.59744 -0.4951 0.7365 -1.57079 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 -0 0 0 -0 0</pose>
+        <mass>0.37946</mass>
+        <inertia>
+          <ixx>0.000400262</ixx>
+          <ixy>1.09682e-20</ixy>
+          <ixz>1.21602e-19</ixz>
+          <iyy>0.000400262</iyy>
+          <iyz>-1.70908e-21</iyz>
+          <izz>0.000731237</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_IW2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IW2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_IW2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IW2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_IW2' type='revolute'>
+      <child>Link_IW2</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>4e-06 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_DA1'>
+      <pose frame=''>0.11687 0.061734 0 1.5708 0.020691 0.3003</pose>
+      <inertial>
+        <pose frame=''>0.156703 3.8e-05 -0.000376 0 -0 0</pose>
+        <mass>0.122762</mass>
+        <inertia>
+          <ixx>2.41174e-05</ixx>
+          <ixy>-3.01126e-10</ixy>
+          <ixz>6.67981e-14</ixz>
+          <iyy>0.000962754</iyy>
+          <iyz>3.27413e-12</iyz>
+          <izz>0.000982182</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_DA1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_DA1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_DA1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_DA1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_DA1' type='revolute'>
+      <child>Link_DA1</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-0.295807 0.955248 4e-06</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_IA1'>
+      <pose frame=''>0.381119 0.188018 -0.005947 -1.59682 -1.02037 -2.77714</pose>
+      <inertial>
+        <pose frame=''>0.363875 -1e-06 0.00629 0 -0 0</pose>
+        <mass>0.0611735</mass>
+        <inertia>
+          <ixx>2.7783e-06</ixx>
+          <ixy>-3.85889e-11</ixy>
+          <ixz>3.88107e-13</ixz>
+          <iyy>0.000398134</iyy>
+          <iyz>-7.13335e-13</iyz>
+          <izz>0.00039845</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_IA1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_IA1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_IA1' type='revolute'>
+      <child>Link_IA1</child>
+      <parent>Link_DA1</parent>
+      <axis>
+        <xyz>-0.335592 0.941909 0.013611</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_EP1'>
+      <pose frame=''>0.026405 0.04986 0.614262 -3.14155 1e-05 -1.27048</pose>
+      <inertial>
+        <pose frame=''>0.039821 0.040001 -0 0 -0 0</pose>
+        <mass>0.105977</mass>
+        <inertia>
+          <ixx>3.99442e-05</ixx>
+          <ixy>-7.81193e-14</ixy>
+          <ixz>1.5825e-16</ixz>
+          <iyy>3.99442e-05</iyy>
+          <iyz>2.93149e-16</iyz>
+          <izz>7.43414e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_EP1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_EP1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_EP1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_EP1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_EP1' type='revolute'>
+      <child>Link_EP1</child>
+      <parent>Link_IA1</parent>
+      <axis>
+        <xyz>-0.295825 0.955242 1e-05</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_IA2'>
+      <pose frame=''>0.406134 0.106872 -0.006315 1.4138 -1.02037 -2.77714</pose>
+      <inertial>
+        <pose frame=''>0.363875 -1e-06 0.00629 0 -0 0</pose>
+        <mass>0.0611735</mass>
+        <inertia>
+          <ixx>2.7783e-06</ixx>
+          <ixy>-4.18724e-11</ixy>
+          <ixz>-8.87255e-13</ixz>
+          <iyy>0.000398134</iyy>
+          <iyz>1.53062e-12</iyz>
+          <izz>0.00039845</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_IA2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_IA2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_IA2' type='revolute'>
+      <child>Link_IA2</child>
+      <parent>Link_DA1</parent>
+      <axis>
+        <xyz>0.227551 -0.970326 -0.081778</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_DA2'>
+      <pose frame=''>-0.004973 -0.13208 0 1.5708 0.020691 -1.7941</pose>
+      <inertial>
+        <pose frame=''>0.156703 3.8e-05 -0.000376 0 -0 0</pose>
+        <mass>0.122762</mass>
+        <inertia>
+          <ixx>2.41174e-05</ixx>
+          <ixy>-3.01133e-10</ixy>
+          <ixz>-3.10234e-14</ixz>
+          <iyy>0.000962754</iyy>
+          <iyz>3.2948e-12</iyz>
+          <izz>0.000982182</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_DA2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_DA2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_DA2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_DA2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_DA2' type='revolute'>
+      <child>Link_DA2</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>0.975171 -0.221453 4e-06</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_IA3'>
+      <pose frame=''>-0.027724 -0.424018 -0.005978 -1.58159 -1.02037 1.41164</pose>
+      <inertial>
+        <pose frame=''>0.363875 -0 0.00629 0 -0 0</pose>
+        <mass>0.0611735</mass>
+        <inertia>
+          <ixx>2.77828e-06</ixx>
+          <ixy>-5.46968e-11</ixy>
+          <ixz>-1.03024e-12</ixz>
+          <iyy>0.000398134</iyy>
+          <iyz>1.69708e-12</iyz>
+          <izz>0.00039845</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_IA3_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_IA3_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_IA3' type='revolute'>
+      <child>Link_IA3</child>
+      <parent>Link_DA2</parent>
+      <axis>
+        <xyz>0.985846 -0.167557 0.005646</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_IA4'>
+      <pose frame=''>-0.110678 -0.406182 -0.00568 1.73039 -1.02037 1.41164</pose>
+      <inertial>
+        <pose frame=''>0.363875 -0 0.00629 0 -0 0</pose>
+        <mass>0.0611735</mass>
+        <inertia>
+          <ixx>2.77828e-06</ixx>
+          <ixy>-5.45045e-11</ixy>
+          <ixz>8.93669e-13</ixz>
+          <iyy>0.000398134</iyy>
+          <iyz>-1.48945e-12</iyz>
+          <izz>0.00039845</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_IA4_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA4.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_IA4_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA4.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_IA4' type='revolute'>
+      <child>Link_IA4</child>
+      <parent>Link_DA2</parent>
+      <axis>
+        <xyz>-0.99628 0.022734 0.083122</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_DA3'>
+      <pose frame=''>-0.1119 0.070348 0 1.5708 0.020691 2.3947</pose>
+      <inertial>
+        <pose frame=''>0.156703 3.8e-05 -0.000376 0 -0 0</pose>
+        <mass>0.122762</mass>
+        <inertia>
+          <ixx>2.41174e-05</ixx>
+          <ixy>-3.01128e-10</ixy>
+          <ixz>4.20187e-14</ixz>
+          <iyy>0.000962754</iyy>
+          <iyz>3.28087e-12</iyz>
+          <izz>0.000982182</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_DA3_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_DA3.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_DA3_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_DA3.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_DA3' type='revolute'>
+      <child>Link_DA3</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-0.679362 -0.733803 4e-06</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_IA5'>
+      <pose frame=''>-0.353399 0.236057 -0.00594 -1.60033 -1.02037 -0.682743</pose>
+      <inertial>
+        <pose frame=''>0.363875 -1e-06 0.00629 0 -0 0</pose>
+        <mass>0.0611736</mass>
+        <inertia>
+          <ixx>2.77832e-06</ixx>
+          <ixy>-2.7296e-11</ixy>
+          <ixz>9.25375e-14</ixz>
+          <iyy>0.000398134</iyy>
+          <iyz>-1.2425e-13</iyz>
+          <izz>0.00039845</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_IA5_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA5.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_IA5_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA5.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_IA5' type='revolute'>
+      <child>Link_IA5</child>
+      <parent>Link_DA3</parent>
+      <axis>
+        <xyz>-0.650175 -0.759627 0.015446</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_IA6'>
+      <pose frame=''>-0.29579 0.298467 -0.006165 1.4888 -1.02037 -0.682741</pose>
+      <inertial>
+        <pose frame=''>0.363875 -1e-06 0.00629 0 -0 0</pose>
+        <mass>0.0611736</mass>
+        <inertia>
+          <ixx>2.77832e-06</ixx>
+          <ixy>-2.60393e-11</ixy>
+          <ixz>-3.70719e-13</ixz>
+          <iyy>0.000398134</iyy>
+          <iyz>5.68726e-13</iyz>
+          <izz>0.00039845</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_IA6_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA6.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_IA6_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IA6.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_IA6' type='revolute'>
+      <child>Link_IA6</child>
+      <parent>Link_DA3</parent>
+      <axis>
+        <xyz>0.682959 0.7292 -0.042838</xyz>
+        <limit>
+          <lower>0</lower>
+          <upper>0</upper>
+          <effort>0</effort>
+          <velocity>0</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_DW1'>
+      <pose frame=''>0.52283 0.5212 0.66 -1.57079 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>-0 0 0.032832 0 -0 0</pose>
+        <mass>2.94158</mass>
+        <inertia>
+          <ixx>0.0137584</ixx>
+          <ixy>7.31575e-07</ixy>
+          <ixz>3.45946e-09</ixz>
+          <iyy>0.0137589</iyy>
+          <iyz>-1.44111e-09</iyz>
+          <izz>0.0251724</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_DW1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_DW1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_DW1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_DW1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_DW1' type='revolute'>
+      <child>Link_DW1</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>-4e-06 1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_DW2'>
+      <pose frame=''>0.52268 -0.5212 0.66 -1.57079 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>-0 -0 -0.032832 0 -0 0</pose>
+        <mass>2.94158</mass>
+        <inertia>
+          <ixx>0.0137584</ixx>
+          <ixy>-7.31575e-07</ixy>
+          <ixz>-3.45946e-09</ixz>
+          <iyy>0.0137589</iyy>
+          <iyz>-1.44111e-09</iyz>
+          <izz>0.0251724</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_DW2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_DW2.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_DW2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_DW2.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_DW2' type='revolute'>
+      <child>Link_DW2</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>4e-06 -1 0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_LIW1'>
+      <pose frame=''>-0.49744 0.4949 0.643 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>-0.028084 0 0.063719 0 -0 0</pose>
+        <mass>0.0919097</mass>
+        <inertia>
+          <ixx>8.42024e-05</ixx>
+          <ixy>3.27347e-10</ixy>
+          <ixz>2.22306e-05</ixz>
+          <iyy>9.5644e-05</iyy>
+          <iyz>5.11505e-10</iyz>
+          <izz>6.8217e-05</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_LIW1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_LIW1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_LIW1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_LIW1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_LIW1' type='revolute'>
+      <child>Link_LIW1</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>0 0 -1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='Link_IW1'>
+      <pose frame=''>-0.59744 0.4949 0.7365 -1.57079 -1.57079 3.14159</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>0.37946</mass>
+        <inertia>
+          <ixx>0.000400262</ixx>
+          <ixy>-6.4556e-20</ixy>
+          <ixz>1.34311e-20</ixz>
+          <iyy>0.000400262</iyy>
+          <iyz>-1.25895e-21</iyz>
+          <izz>0.000731237</izz>
+        </inertia>
+      </inertial>
+      <collision name='Link_IW1_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IW1.STL</uri>
+          </mesh>
+        </geometry>
+      </collision>
+      <visual name='Link_IW1_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://URDF-WeedingRobot/meshes/Link_IW1.STL</uri>
+          </mesh>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='Joint_IW1' type='revolute'>
+      <child>Link_IW1</child>
+      <parent>Link_LIW1</parent>
+      <axis>
+        <xyz>-4e-06 1 -0</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+  </model>
+</sdf>

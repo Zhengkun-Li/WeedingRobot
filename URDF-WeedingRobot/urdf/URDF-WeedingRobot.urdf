@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="URDF-WeedingRobot">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0240494552887074 1.54351986245693E-05 0.0573591602823607"
+        rpy="0 0 0" />
+      <mass
+        value="5.80545461370202" />
+      <inertia
+        ixx="0.0826373641733662"
+        ixy="-1.16580633842952E-06"
+        ixz="2.67582199584457E-07"
+        iyy="0.0727332150832678"
+        iyz="-2.67582199542909E-07"
+        izz="0.085148480072265" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Link_DW1">
+    <inertial>
+      <origin
+        xyz="-4.40552631042479E-07 2.10958454927024E-07 0.0328317259919627"
+        rpy="0 0 0" />
+      <mass
+        value="2.94158049184794" />
+      <inertia
+        ixx="0.0137584287347603"
+        ixy="7.31574833933709E-07"
+        ixz="3.45946130217678E-09"
+        iyy="0.0137589416533869"
+        iyz="-1.44111213196041E-09"
+        izz="0.0251723834664196" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_DW1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.968627450980392 1 0.0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_DW1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_DW1"
+    type="continuous">
+    <origin
+      xyz="0.52283 0.5212 0.66"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_DW1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Link_DW2">
+    <inertial>
+      <origin
+        xyz="-4.4055263059839E-07 -2.10958454927024E-07 -0.0328317259919626"
+        rpy="0 0 0" />
+      <mass
+        value="2.94158049184791" />
+      <inertia
+        ixx="0.0137584287347603"
+        ixy="-7.31574833871411E-07"
+        ixz="-3.45946130574155E-09"
+        iyy="0.0137589416533866"
+        iyz="-1.44111213453852E-09"
+        izz="0.0251723834664194" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_DW2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.968627450980392 1 0.0313725490196078 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_DW2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_DW2"
+    type="continuous">
+    <origin
+      xyz="0.52268 -0.5212 0.66"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_DW2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Link_LIW1">
+    <inertial>
+      <origin
+        xyz="-0.0280839961092559 3.06902402186227E-07 0.0637185584706585"
+        rpy="0 0 0" />
+      <mass
+        value="0.0919096848999866" />
+      <inertia
+        ixx="8.42024256464785E-05"
+        ixy="3.27346794480319E-10"
+        ixz="2.22305907273074E-05"
+        iyy="9.56440405909929E-05"
+        iyz="5.11505235308873E-10"
+        izz="6.82170363339354E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_LIW1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_LIW1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_LIW1"
+    type="continuous">
+    <origin
+      xyz="-0.49744 0.4949 0.643"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_LIW1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Link_IW1">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.379460117541959" />
+      <inertia
+        ixx="0.000400261642338818"
+        ixy="-6.45559702930331E-20"
+        ixz="1.34311383111536E-20"
+        iyy="0.000400261642338818"
+        iyz="-1.25894738228749E-21"
+        izz="0.000731236968868398" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IW1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IW1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_IW1"
+    type="continuous">
+    <origin
+      xyz="-0.1 0 0.0935"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Link_LIW1" />
+    <child
+      link="Link_IW1" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="Link_LIW2">
+    <inertial>
+      <origin
+        xyz="-0.0280839961092557 3.06902402158471E-07 0.0637185584706575"
+        rpy="0 0 0" />
+      <mass
+        value="0.091909684899985" />
+      <inertia
+        ixx="8.4202425646478E-05"
+        ixy="3.27346794824932E-10"
+        ixz="2.22305907273076E-05"
+        iyy="9.56440405909922E-05"
+        iyz="5.11505235571691E-10"
+        izz="6.82170363339346E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_LIW2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_LIW2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joiint_LIW2"
+    type="fixed">
+    <origin
+      xyz="-0.49744 -0.4951 0.643"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_LIW2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Link_IW2">
+    <inertial>
+      <origin
+        xyz="0 -1.38777878078145E-17 2.22044604925031E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.37946011754196" />
+      <inertia
+        ixx="0.000400261642338819"
+        ixy="1.09682234877719E-20"
+        ixz="1.21602104024581E-19"
+        iyy="0.000400261642338819"
+        iyz="-1.70908224234927E-21"
+        izz="0.000731236968868401" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IW2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IW2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_IW2"
+    type="continuous">
+    <origin
+      xyz="-0.1 0 0.0935"
+      rpy="1.5708 -1.5708 0" />
+    <parent
+      link="Link_LIW2" />
+    <child
+      link="Link_IW2" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="Link_DA1">
+    <inertial>
+      <origin
+        xyz="0.156703483307603 3.77011620507073E-05 -0.000375510932605794"
+        rpy="0 0 0" />
+      <mass
+        value="0.122762258008665" />
+      <inertia
+        ixx="2.41173755836697E-05"
+        ixy="-3.01125951979139E-10"
+        ixz="6.67980693883617E-14"
+        iyy="0.000962753654130799"
+        iyz="3.27412983005173E-12"
+        izz="0.000982182178476426" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_DA1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_DA1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_DA1"
+    type="revolute">
+    <origin
+      xyz="0.11687 0.061734 0"
+      rpy="1.5708 0.020691 0.3003" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_DA1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_IA1">
+    <inertial>
+      <origin
+        xyz="0.363874938759471 -7.15276268992149E-07 0.00628992640892978"
+        rpy="0 0 0" />
+      <mass
+        value="0.0611735268647337" />
+      <inertia
+        ixx="2.77830455306794E-06"
+        ixy="-3.8588939656535E-11"
+        ixz="3.88106806121127E-13"
+        iyy="0.000398134076541117"
+        iyz="-7.13335166217972E-13"
+        izz="0.000398449849463631" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_IA1"
+    type="revolute">
+    <origin
+      xyz="0.28984 4.9068E-05 -0.042466"
+      rpy="0.028672 -0.033534 2.141" />
+    <parent
+      link="Link_DA1" />
+    <child
+      link="Link_IA1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_EP1">
+    <inertial>
+      <origin
+        xyz="0.0398205077745882 0.0400013083733138 -8.95405971590435E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.10597689116598" />
+      <inertia
+        ixx="3.99441876691546E-05"
+        ixy="-7.81192822154339E-14"
+        ixz="1.582498504488E-16"
+        iyy="3.99441875796143E-05"
+        iyz="2.93149093514839E-16"
+        izz="7.43414354795065E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_EP1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_EP1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_EP1"
+    type="revolute">
+    <origin
+      xyz="0.72771 -3.518E-05 0.0026512"
+      rpy="-1.2571 -1.5267 0.70715" />
+    <parent
+      link="Link_IA1" />
+    <child
+      link="Link_EP1" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_IA2">
+    <inertial>
+      <origin
+        xyz="0.363875104533978 -7.24719779077176E-07 0.00628992657241023"
+        rpy="0 0 0" />
+      <mass
+        value="0.0611735175674628" />
+      <inertia
+        ixx="2.77829869107381E-06"
+        ixy="-4.18723803235706E-11"
+        ixz="-8.87255270942863E-13"
+        iyy="0.000398134089055597"
+        iyz="1.53061895433572E-12"
+        izz="0.000398449856041378" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_IA2"
+    type="revolute">
+    <origin
+      xyz="0.28974 -0.00032036 0.042448"
+      rpy="3.0393 -0.033535 2.141" />
+    <parent
+      link="Link_DA1" />
+    <child
+      link="Link_IA2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_DA2">
+    <inertial>
+      <origin
+        xyz="0.156703481925114 3.77012706925806E-05 -0.000375510753618746"
+        rpy="0 0 0" />
+      <mass
+        value="0.122762259109075" />
+      <inertia
+        ixx="2.41173756296262E-05"
+        ixy="-3.01133079186685E-10"
+        ixz="-3.10234232204218E-14"
+        iyy="0.000962753654194263"
+        iyz="3.29479518636281E-12"
+        izz="0.000982182178479717" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_DA2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_DA2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_DA2"
+    type="revolute">
+    <origin
+      xyz="-0.004973 -0.13208 0"
+      rpy="1.5708 0.020691 -1.7941" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_DA2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_IA3">
+    <inertial>
+      <origin
+        xyz="0.363875123680443 -8.87841355989849E-08 0.00628992701402498"
+        rpy="0 0 0" />
+      <mass
+        value="0.0611734923417798" />
+      <inertia
+        ixx="2.77828486733106E-06"
+        ixy="-5.46968415229733E-11"
+        ixz="-1.03024349672425E-12"
+        iyy="0.000398134125059119"
+        iyz="1.69708023065799E-12"
+        izz="0.000398449878184354" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_IA3"
+    type="revolute">
+    <origin
+      xyz="0.28979 1.7379E-05 -0.042464"
+      rpy="0.043903 -0.033534 2.141" />
+    <parent
+      link="Link_DA2" />
+    <child
+      link="Link_IA3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_IA4">
+    <inertial>
+      <origin
+        xyz="0.363874892782067 -7.30288514105837E-08 0.00628992705815457"
+        rpy="0 0 0" />
+      <mass
+        value="0.0611734907973465" />
+      <inertia
+        ixx="2.77828276264781E-06"
+        ixy="-5.45045315453631E-11"
+        ixz="8.93668544017361E-13"
+        iyy="0.000398134126934112"
+        iyz="-1.48944527399869E-12"
+        izz="0.000398449877900636" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_IA4"
+    type="revolute">
+    <origin
+      xyz="0.29076 0.00033568 0.04238"
+      rpy="-2.9273 -0.033535 2.141" />
+    <parent
+      link="Link_DA2" />
+    <child
+      link="Link_IA4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_DA3">
+    <inertial>
+      <origin
+        xyz="0.156703483035012 3.77012240663221E-05 -0.000375510807029966"
+        rpy="0 0 0" />
+      <mass
+        value="0.122762258373338" />
+      <inertia
+        ixx="2.41173756084877E-05"
+        ixy="-3.01127685394928E-10"
+        ixz="4.20186626175234E-14"
+        iyy="0.000962753654135975"
+        iyz="3.2808748351494E-12"
+        izz="0.000982182178459406" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_DA3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_DA3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_DA3"
+    type="revolute">
+    <origin
+      xyz="-0.1119 0.070348 0"
+      rpy="1.5708 0.020691 2.3947" />
+    <parent
+      link="base_link" />
+    <child
+      link="Link_DA3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_IA5">
+    <inertial>
+      <origin
+        xyz="0.363874998085676 -7.17550802109557E-07 0.00628992620303534"
+        rpy="0 0 0" />
+      <mass
+        value="0.0611735509168848" />
+      <inertia
+        ixx="2.77831838942599E-06"
+        ixy="-2.72959687934724E-11"
+        ixz="9.25374631204926E-14"
+        iyy="0.000398134042641157"
+        iyz="-1.24249989095181E-13"
+        izz="0.000398449829366416" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_IA5"
+    type="revolute">
+    <origin
+      xyz="0.28985 5.6368E-05 -0.042467"
+      rpy="0.025163 -0.033534 2.141" />
+    <parent
+      link="Link_DA3" />
+    <child
+      link="Link_IA5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="Link_IA6">
+    <inertial>
+      <origin
+        xyz="0.363875030089534 -7.20427527689527E-07 0.00628992621884045"
+        rpy="0 0 0" />
+      <mass
+        value="0.0611735518888613" />
+      <inertia
+        ixx="2.77831876295902E-06"
+        ixy="-2.60393431221535E-11"
+        ixz="-3.70719285097959E-13"
+        iyy="0.000398134040815369"
+        iyz="5.68726177805658E-13"
+        izz="0.000398449827868382" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA6.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://URDF-WeedingRobot/meshes/Link_IA6.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Joint_IA6"
+    type="revolute">
+    <origin
+      xyz="0.28998 -0.00016524 0.042466"
+      rpy="3.1143 -0.033535 2.141" />
+    <parent
+      link="Link_DA3" />
+    <child
+      link="Link_IA6" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+</robot>
